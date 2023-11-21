@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
         div.classList.add('dynamicDiv');
 
 
-        const p1 = document.createElement('p');
-        const p2 = document.createElement('p');
+        const p1 = document.createElement('h4');
+        const p2 = document.createElement('h3');
         const button = document.createElement('button');
         const image = document.createElement('img');
 
         p1.textContent = item.text1;
         p2.textContent = item.text2;
-        button.textContent = "Oneclick"
+        button.textContent = "Book Now"
         image.src = item.image;
 
         div.appendChild(p1);
@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// JavaScript for automatic image swipe
+
 const cardImages = document.querySelector('.card-images');
 let imageIndex = 0;
 
 setInterval(() => {
-    imageIndex = (imageIndex + 1) % 5; // Number of images, change '5' if needed
+    imageIndex = (imageIndex + 1) % 5;
     cardImages.style.transform = `translateX(-${imageIndex * 100}%)`;
-}, 2000); // Change image every 2 seconds, modify timing as needed
+}, 2000); 
 
 
 
@@ -72,28 +72,23 @@ setInterval(() => {
 
 
 function initMap() {
-    // Specify coordinates for the map center
-    const myLatLng = { lat: 19.0728300, lng: 72.8826100 }; // Replace with your desired coordinates
+    const myLatLng = { lat: 19.0728300, lng: 72.8826100 }; // Mumbai Co-ordinates
 
     const map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
         zoom: 10
     });
 
-    // Add markers to the map
     const marker1 = new google.maps.Marker({
-        position: { lat: -34.5, lng: 150.7 }, // Replace with marker 1 coordinates
+        position: { lat: 19.0738300, lng: 72.8824100 }, 
         map: map,
         title: 'Marker 1'
     });
 
     const marker2 = new google.maps.Marker({
-        position: { lat: -34.3, lng: 150.5 }, // Replace with marker 2 coordinates
+        position: { lat: 19.0423300, lng: 72.8326100}, 
         map: map,
         title: 'Marker 2'
     });
 
-    // You can add more customization or markers to the map as needed
-    // Example: map.setOptions({styles: YOUR_CUSTOM_STYLES});
-    // Example: new google.maps.Marker({position: myLatLng, map: map, title: 'Marker Title'});
 }

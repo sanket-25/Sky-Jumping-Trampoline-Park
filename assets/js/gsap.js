@@ -1,5 +1,5 @@
 var w = document.documentElement.clientWidth || window.innerWidth;
-if (w >= 300) {
+if (w >= 600) {
     gsap.from(".left-text", {
         scrollTrigger: {
             trigger: ".card-container",
@@ -36,24 +36,6 @@ if (w >= 300) {
 
 } //only for desktop screen
 
-// gsap.from("#About", {
-//     duration: 2,
-//     opacity: 0,
-//     rotationX: 90,
-//     backgroundColor: "red",
-//     //   rotationY: 90,
-//     //   rotationZ: 90,
-//     scaleX: 0.8,
-//     z: -300,
-//     backgroundColor: "linear-gradient(104.39deg, #1f87ec 3.92%, #29c2c2 81.45%)",
-//     scrollTrigger: {
-//         trigger: "#About",
-//         // markers: true,
-//         start: "top 90%",
-//         end: "top 20%",
-//         scrub: 2
-//     },
-// })
 
 
 
@@ -74,7 +56,6 @@ gsap.from("#map", {
         scrub: 2
     },
 
-    // Use backgroundColor instead of css property
 });
 
 
@@ -93,7 +74,7 @@ gsap.from("#map", {
 ScrollTrigger.create({
    
     trigger: 'section#About',
-    markers:true,
+    // markers:true,
     start:"top 70%",
     end:"bottom 0%", 
   
@@ -107,21 +88,3 @@ ScrollTrigger.create({
   
     
   })
-  
-//   ScrollTrigger.create({
-    
-//     trigger: 'section.three',
-//     markers:true,
-//     start:"top 50%",
-//     end:"bottom 0%", 
-  
-//     onEnter: () => {
-//       gsap.to('body', { duration: 1.0, backgroundColor: '#000000'})
-//     },
-    
-//     onLeaveBack: () => {
-//       gsap.to('body', { duration: 1.0, backgroundColor: '#ff0000'})
-//     },
-  
-    
-//   })
