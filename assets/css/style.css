@@ -3,6 +3,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  /* overflow-x: hidden; */
 }
 
 .marquee {
@@ -58,28 +59,38 @@ video {
   transform: translate(-50%, 0);
 }
 
-.navbar-ul li {
+.navbar-ul li a {
   margin-left: 1vw;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .buttons {
   position: absolute;
   right: 0vw;
   display: flex;
+  
 
 }
 
 @media only screen and (max-width: 600px) {
   .buttons {
     top: 60vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    right: auto !important;
   }
 
 }
 
 @media only screen and (min-width:700px) and (max-width:1000px) {
-  .navbar-ul{
+  .navbar-ul {
     left: 50vw !important;
   }
+
   .buttons {
     position: absolute;
     top: 60vh;
@@ -96,13 +107,20 @@ video {
 .buttons button {
   border: 1px solid red;
   background-color: #F0852D;
+  color: #fff;
   border-radius: 2vw;
   padding: 1vw 2vh;
   margin: 1vw;
   margin-left: 15px;
   transition: all .2s;
-  width: 190px;
+  width: 160px;
   box-shadow: 0 0 10px #000;
+  display: block;
+}
+
+button:hover {
+  background-color: #FEDD3F;
+  color: black;
 }
 
 
@@ -113,13 +131,22 @@ video {
 
 
 @media only screen and (max-width: 600px) {
-  #Discount {
-    display: none;
+  #Discounts {
+    display: block !important;
     top: 0;
+    overflow: auto !important;
+    white-space: nowrap !important;
   }
 
   .dynamicDiv {
     width: 90vw !important;
+    display: inline-block !important;
+    margin: 2vw;
+    height: 80vh;
+  }
+
+  button {
+    display: block;
   }
 
 }
@@ -163,13 +190,13 @@ video {
 
 .dynamicDiv button {
   color: #000;
-    font-size: 15px;
-    border-radius: 25px;
-    padding: 6px 20px;
-    background: #FEDD3F;
-    transition: all .2s;
-    width: 135px;
-    margin: 0 auto;
+  font-size: 15px;
+  border-radius: 25px;
+  padding: 6px 20px;
+  background: #FEDD3F;
+  transition: all .2s;
+  width: 135px;
+  margin: 0 auto;
 }
 
 .dynamicDiv img {
@@ -212,15 +239,20 @@ video {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
   #Park-Attraction {
     flex-direction: column;
+    height: 110vh !important;
   }
 
   #Park-Attraction .left-text {
     width: 100vw;
-    font-size: 12.5vw;
+    font-size: 12.5vw !important;
+  }
+
+  .left-text span {
+    font-size: 12.5vw !important;
   }
 }
 
@@ -246,30 +278,39 @@ video {
 
 #About p {
   color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
 }
 
 .about-section {
   height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #F3F6F4;
   padding: 50px;
 }
 
 .testimonial-section {
   background-color: #fff;
   padding: 50px 0;
+  position: relative;
 }
 
 .testimonial {
   text-align: center;
   margin-bottom: 30px;
+  /* position: relative; */
+}
+
+.happy-tales {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -10vh;
 }
 
 .testimonial img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin-bottom: 20px;
 }

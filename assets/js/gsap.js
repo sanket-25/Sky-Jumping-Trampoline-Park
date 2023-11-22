@@ -1,5 +1,5 @@
 var w = document.documentElement.clientWidth || window.innerWidth;
-if (w >= 600) {
+if (w >= 900) {
     gsap.from(".left-text", {
         scrollTrigger: {
             trigger: ".card-container",
@@ -72,19 +72,19 @@ gsap.from("#map", {
 
 
 ScrollTrigger.create({
-   
+
     trigger: 'section#About',
     // markers:true,
-    start:"top 70%",
-    end:"bottom 0%", 
-  
+    start: "top 70%",
+    end: "bottom 0%",
+
     onEnter: () => {
-      gsap.to('#About, #Park-Attraction', { duration: 2.0, backgroundColor: '#1f87ec'})
+        gsap.to('#About, #Park-Attraction', { duration: 2.0, backgroundColor: '#1f87ec' })
     },
-    
+
     onLeaveBack: () => {
-      gsap.to('#About, #Park-Attraction', { duration: 2.0, backgroundColor: '#ffffff'})
+        gsap.to('#About, #Park-Attraction', { duration: 2.0, backgroundColor: '#ffffff' })
     },
-  
-    
-  })
+
+
+})
