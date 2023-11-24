@@ -36,7 +36,106 @@ if (w >= 900) {
 
 } //only for desktop screen
 
+// const t1 = gsap.timeline();
 
+// t1
+//     .from('nav')
+
+const tl = gsap.timeline();
+
+// Add animations to the timeline with desired delays
+tl.from('nav', {
+    duration: 2,
+    opacity: 0,
+    y: -100,
+    rotationX: -90,
+})
+    .from('.center-text', {
+        duration: 2,
+        opacity: 0,
+        scale: 0,
+        rotationX: -90,
+    }, '-=1.5') // Use a negative delay to overlap with the previous animation
+    .from('#Discounts', {
+        duration: 2,
+        opacity: 0,
+        y: 100,
+        rotationX: 90,
+    }, '-=1.5');
+
+gsap.to("left-text span", {
+    backgroundPositionX: "0%",
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".left-text",
+        markes: true,
+        scrub: 1,
+        start: "top center",
+        end: "bottom center"
+    }
+})
+
+gsap.from(".col-md-6 p", {
+    duration: 2.5,
+    ease: "power3.out",
+    x: -100,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#About",
+        markes: true,
+        scrub: 1,
+        start: "top center",
+        end: "bottom center"
+    }
+});
+
+
+gsap.from(".happy-tales", {
+
+    duration: 3,
+    rotationZ: 360,
+    scaleX: 0.8,
+    scrollTrigger: {
+        trigger: ".happy-tales",
+        markers: true,
+        start: "top 70%",
+        end: "top 40%",
+        scrub: 2
+    },
+
+});
+
+gsap.from(".testimonial img", {
+
+    duration: 3,
+    // rotationZ: 360,
+    scale: 0,
+    opacity: 0,
+    // y: 100,
+    scrollTrigger: {
+        trigger: ".testimonial img",
+        markers: true,
+        start: "top 90%",
+        end: "top 70%",
+        scrub: 2
+    },
+});
+
+gsap.from(".testimonial h3, .testimonial p", {
+
+    duration: 3,
+    // rotationZ: 360,
+    // scale: 0,
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".testimonial img",
+        markers: true,
+        start: "top 90%",
+        end: "top 70%",
+        scrub: 2
+    },
+});
 
 
 gsap.from("#map", {
